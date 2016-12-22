@@ -1,0 +1,11 @@
+# see git-dpm(1) from git-dpm package
+82bb3bfce4b3a3cedadde2410dbd9deac3c35327
+82bb3bfce4b3a3cedadde2410dbd9deac3c35327
+90839985ac22066b03cf26576bf553460c71124e
+90839985ac22066b03cf26576bf553460c71124e
+flask-restful_0.3.5.orig.tar.gz
+c701a0a8902557bf51c71c765b9b6b9ec5edaf4e
+113214
+debianTag="debian/%e%v"
+patchedTag="patched/%e%v"
+upstreamTag="upstream/%e%u"

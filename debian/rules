@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+export PYBUILD_NAME=flask-restful
+
+%:
+	dh $@ --buildsystem=pybuild --with=python2,python3,sphinxdoc
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf $(CURDIR)/docs/_build
+
+override_dh_auto_build:
+	dh_auto_build
+	cd docs; PYTHONPATH=.. http_proxy='127.0.0.1:9' make html

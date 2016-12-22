@@ -1,0 +1,9 @@
+Document: python-flask-restful
+Title: Flask-RESTful
+Author: Twilio, Inc.
+Abstract: Simple framework for creating REST APIs
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-flask-restful-doc/html/index.html
+Files: /usr/share/doc/python-flask-restful-doc/html/*.html

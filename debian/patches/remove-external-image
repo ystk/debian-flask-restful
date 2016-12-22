@@ -1,0 +1,28 @@
+From 81b0b8d57544dcab9fa1a5e0ac3dc81a2ac4f231 Mon Sep 17 00:00:00 2001
+From: Jonathan Carter <jonathan@ubuntu.com>
+Date: Sat, 2 Jan 2016 18:07:23 +0200
+Subject: remove externally linked image
+
+Remove an externally linked image that could cause a potential privacy
+violation.
+
+Patch-Name: remove-external-image
+---
+ docs/_themes/flask_small/layout.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/docs/_themes/flask_small/layout.html b/docs/_themes/flask_small/layout.html
+index aa1716a..4373a0f 100644
+--- a/docs/_themes/flask_small/layout.html
++++ b/docs/_themes/flask_small/layout.html
+@@ -14,8 +14,10 @@
+ {% block relbar1 %}{% endblock %}
+ {% block relbar2 %}
+   {% if theme_github_fork %}
++    <!--
+     <a href="http://github.com/{{ theme_github_fork }}"><img style="position: fixed; top: 0; right: 0; border: 0;"
+     src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
++    -->
+   {% endif %}
+ {% endblock %}
+ {% block sidebar1 %}{% endblock %}

@@ -1,0 +1,74 @@
+Source: flask-restful
+Section: python
+Priority: optional
+Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Uploaders: Jonathan Carter <jonathan@ubuntu.com>
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-aniso8601,
+               python-blinker,
+               python-crypto,
+               python-flask,
+               python-flask-doc,
+               python-mock,
+               python-nose,
+               python-setuptools,
+               python-six,
+               python-werkzeug-doc,
+               python-tz,
+               python3-all,
+               python3-aniso8601,
+               python3-blinker,
+               python3-crypto,
+               python3-doc,
+               python3-flask,
+               python3-mock,
+               python3-nose,
+               python3-setuptools,
+               python3-sphinx,
+               python3-six,
+               python3-tz
+Standards-Version: 3.9.8
+Homepage: https://github.com/twilio/flask-restful
+Vcs-Git: https://anonscm.debian.org/git/python-modules/packages/flask-restful.git
+Vcs-Browser: https://anonscm.debian.org/cgit/python-modules/packages/flask-restful.git
+Testsuite: autopkgtest-pkg-python
+
+Package: python-flask-restful
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: REST API framework for Flask applications (Python Module)
+ Flask-RESTful is an extension for Flask that adds support for quickly building
+ REST APIs. It is a lightweight abstraction that works with your existing
+ ORM/libraries. Flask-RESTful encourages best practices with minimal setup.
+ If you are familiar with Flask, Flask-RESTful should be easy to pick up.
+ .
+ This package provides the module for Python 2.
+
+Package: python3-flask-restful
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: REST API framework for Flask applications (Python3 Module)
+ Flask-RESTful is an extension for Flask that adds support for quickly building
+ REST APIs. It is a lightweight abstraction that works with your existing
+ ORM/libraries. Flask-RESTful encourages best practices with minimal setup.
+ If you are familiar with Flask, Flask-RESTful should be easy to pick up.
+ .
+ This package provides the module for Python 3.
+
+Package: python-flask-restful-doc
+Section: doc
+Architecture: all
+Depends: ${misc:Depends},
+         ${sphinxdoc:Depends},
+         python-flask-doc,
+         python-werkzeug-doc,
+         python3-doc,
+Description: REST API framework for Flask applications (Documentation)
+ Flask-RESTful is an extension for Flask that adds support for quickly building
+ REST APIs. It is a lightweight abstraction that works with your existing
+ ORM/libraries. Flask-RESTful encourages best practices with minimal setup.
+ If you are familiar with Flask, Flask-RESTful should be easy to pick up.
+ .
+ This package provides the documentation.

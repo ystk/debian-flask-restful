@@ -1,0 +1,4 @@
+skip-bad-test
+remove-external-image
+0003-Use-local-copies-of-object.inv-for-building-document.patch
+0004-Use-SOURCE_DATE_EPOCH-for-copyright-year-to-make-bui.patch

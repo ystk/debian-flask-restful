@@ -1,0 +1,2 @@
+# The .html file that lintian reports is part of a template, and not documentation in itself
+python3-flask-restful binary: possible-documentation-but-no-doc-base-registration

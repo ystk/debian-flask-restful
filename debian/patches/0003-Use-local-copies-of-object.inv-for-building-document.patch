@@ -1,0 +1,28 @@
+From e398c25382eb8479a7f46fc42a05aad9afbbe29f Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Ond=C5=99ej=20Nov=C3=BD?= <onovy@debian.org>
+Date: Sat, 13 Aug 2016 23:41:51 +0200
+Subject: Use local copies of object.inv for building documentation
+
+---
+ docs/conf.py | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+diff --git a/docs/conf.py b/docs/conf.py
+index 86fafe6..1957254 100644
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -256,9 +256,9 @@ texinfo_documents = [
+ #texinfo_show_urls = 'footnote'
+ 
+ intersphinx_mapping = {
+-  'flask': ('http://flask.pocoo.org/docs/', None),
+-  'werkzeug': ('http://werkzeug.pocoo.org/docs/', None),
+-  'python': ('https://docs.python.org/2/', None),
+-  'python3': ('https://docs.python.org/3/', None),
+-  'six': ('http://pythonhosted.org/six/', None),
++  'flask': ('/usr/share/doc/python-flask-doc/html', None),
++  'werkzeug': ('/usr/share/doc/python-werkzeug-doc/html', None),
++  'python': ('/usr/share/doc/python3-doc/html', None),
++  'python3': ('/usr/share/doc/python3-doc/html', None),
++  'six': (None),
+ }

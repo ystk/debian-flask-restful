@@ -1,0 +1,1 @@
+tar-ignore = "usr/share/doc/python3-flask-restful/docs/_themes/.gitignore usr/share/doc/python3-flask-restful/docs/_themes/LICENSE"

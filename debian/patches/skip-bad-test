@@ -1,0 +1,45 @@
+From 482e4504c5292ac220b715247f144ea7eac5c70e Mon Sep 17 00:00:00 2001
+From: Jonathan Carter <jonathan@ubuntu.com>
+Date: Sat, 2 Jan 2016 18:06:26 +0200
+Subject: skip test that is broken
+
+test_accept_no_default_match_q0_not_acceptable will fail until Werkzeug
+version 1.0 is released. Until then, this test is disabled.
+
+Bug-Debian: https://bugs.debian.org/763962
+Patch-Name: skip-bad-test
+---
+ tests/test_accept.py | 20 --------------------
+ 1 file changed, 20 deletions(-)
+
+diff --git a/tests/test_accept.py b/tests/test_accept.py
+index 6eb3416..730f868 100644
+--- a/tests/test_accept.py
++++ b/tests/test_accept.py
+@@ -144,26 +144,6 @@ class AcceptTestCase(unittest.TestCase):
+             assert_equals(res.content_type, 'text/plain')
+ 
+ 
+-    def test_accept_no_default_match_q0_not_acceptable(self):
+-        """
+-        q=0 should be considered NotAcceptable,
+-        but this depends on werkzeug >= 1.0 which is not yet released
+-        so this test is expected to fail until we depend on werkzeug >= 1.0
+-        """
+-        class Foo(flask_restful.Resource):
+-            def get(self):
+-                return "data"
+-
+-        app = Flask(__name__)
+-        api = flask_restful.Api(app, default_mediatype=None)
+-
+-        api.add_resource(Foo, '/')
+-
+-        with app.test_client() as client:
+-            res = client.get('/', headers=[('Accept', 'application/json; q=0')])
+-            assert_equals(res.status_code, 406)
+-            assert_equals(res.content_type, 'application/json')
+-
+     def test_accept_no_default_accept_highest_quality_of_two(self):
+         class Foo(flask_restful.Resource):
+             def get(self):
